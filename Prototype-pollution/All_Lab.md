@@ -12,7 +12,7 @@ After seeing the burp response for both it is slightly clear where we inject
 
 <img src="images/image3.png" alt="third" width="500">
 
-<img src="images/image3.png" alt="third" width="500">
+<img src="images/image4.png" alt="third" width="500">
 
 From here one thing is clear that we can inject in search query parameter
 
@@ -20,7 +20,7 @@ From here one thing is clear that we can inject in search query parameter
 
 Now when I inspect page and go to searchLoggerConfigurable.js we can see
 
-<img src="images/image4.png" alt="third" width="500">
+<img src="images/image5.png" alt="third" width="500">
 
 So after analysize it is clear that 
 
@@ -31,12 +31,12 @@ So we inject query in url
 __proto__[value]=data:,alert(1);
 
 
-<img src="images/image5.png" alt="third" width="500">
+<img src="images/image6.png" alt="third" width="500">
 
 
 And the lab is solved.
 
-<img src="images/image6.png" alt="third" width="500">
+<img src="images/image7.png" alt="third" width="500">
 
 **Step1:**
 
