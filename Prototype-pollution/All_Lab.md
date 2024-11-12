@@ -12,6 +12,8 @@ After seeing the burp response for both it is slightly clear where we inject
 
 <img src="images/image3.png" alt="third" width="500">
 
+<img src="images/image3.png" alt="third" width="500">
+
 From here one thing is clear that we can inject in search query parameter
 
 **Step2:**
