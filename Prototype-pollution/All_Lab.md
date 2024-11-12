@@ -79,31 +79,31 @@ Enabling DOM invader
 
 We  have a burpsuite sign at top right
 
-<img src="images/image5.png" alt="third" width="500">
+<img src="images/image8.png" alt="third" width="500">
 
 Click on it and under DOM invader turn on "DOM invader is on" option
 
 And under attack turn on prototype pollution .
 
-<img src="images/image5.png" alt="third" width="500">
+<img src="images/image9.png" alt="third" width="500">
 
 **Step3:**
 
 Now refresh page and under DOM-invader we have
 
-<img src="images/image5.png" alt="third" width="500">
+<img src="images/image10.png" alt="third" width="500">
 
 Click on scan for gadget and we have sink
 
-<img src="images/image5.png" alt="third" width="500">
+<img src="images/image11.png" alt="third" width="500">
 
 Simple click on exploit and we have exploit in url
 
-<img src="images/image5.png" alt="third" width="500">
+<img src="images/image12.png" alt="third" width="500">
 
 And Lab is solved.
 
-<img src="images/image5.png" alt="third" width="500">
+<img src="images/image13.png" alt="third" width="500">
 
 **Step1:**
 
@@ -155,7 +155,7 @@ When we run this it given error in consolve. So we use alert(1) -
 
 And the alert is trigger
 
-<img src="images/image5.png" alt="third" width="500">
+<img src="images/image14.png" alt="third" width="500">
 
 Using DOM invader
 
@@ -163,13 +163,13 @@ Using DOM invader
 
 Refresh page we have source 
 
-<img src="images/image5.png" alt="third" width="500">
+<img src="images/image15.png" alt="third" width="500">
 
 Click on scan for gadget
 
 **Step2:**
 
-<img src="images/image5.png" alt="third" width="500">
+<img src="images/image16.png" alt="third" width="500">
 
 And we have one sink found click on exploit
 
@@ -177,20 +177,20 @@ And we have one sink found click on exploit
 
 In url append exploit with -
 
-<img src="images/image5.png" alt="third" width="500">
+<img src="images/image17.png" alt="third" width="500">
 
 And the lab is solved.
 
 
 ?__pro__proto__to__[transport_url]=data:,alert(1);
 
-<img src="images/image5.png" alt="third" width="500">
+<img src="images/image18.png" alt="third" width="500">
 
 **Step1:**
 
 First we analyze 
 
-<img src="images/image5.png" alt="third" width="500">
+<img src="images/image19.png" alt="third" width="500">
 
 Example:
 This script logs query parameters from the URL on page load, potentially sending them to a server (/logger) if the search parameter exists. It also sanitizes keys to prevent prototype pollution by removing dangerous properties like constructor and `__proto__`
@@ -203,9 +203,9 @@ After few payload we come to conclusion that that this can trigger the alert
 
 `?__pro__proto__to__[transport_url]=data:,alert(1);`
 
-<img src="images/image5.png" alt="third" width="500">
+<img src="images/image20.png" alt="third" width="500">
 
-<img src="images/image5.png" alt="third" width="500">
+<img src="images/image21.png" alt="third" width="500">
 
 **Step1:**
 
@@ -215,7 +215,7 @@ First we login with given credential
 
 Click on button so we have updated billing and delivery address
 
-<img src="images/image5.png" alt="third" width="500">
+<img src="images/image22.png" alt="third" width="500">
 
 **Step3:**
 
@@ -225,13 +225,13 @@ Now when we analyze POST /my-account/change-address we can see in response we ha
 
 If we simply try to inject parameter we can see in result it reflect
 
-<img src="images/image5.png" alt="third" width="500">
+<img src="images/image23.png" alt="third" width="500">
 
 Here we see that admin is set to false and secondly we have to inject a prototype so we escalate.
 
 **Step5:**
 
-<img src="images/image5.png" alt="third" width="500">
+<img src="images/image24.png" alt="third" width="500">
 
 Here we can see that we are able to override admin parameter.
 
@@ -239,15 +239,15 @@ Here we can see that we are able to override admin parameter.
 
 So now we end a post reuqest to /admin and we can see in response we have
 
-<img src="images/image5.png" alt="third" width="500">
+<img src="images/image25.png" alt="third" width="500">
 
 Simply Send a post request to /delete endpoint with carlos parameter
 
-<img src="images/image5.png" alt="third" width="500">
+<img src="images/image26.png" alt="third" width="500">
 
 And the lab is solved.
 
-<img src="images/image5.png" alt="third" width="500">
+<img src="images/image27.png" alt="third" width="500">
 
 **Step1:**
 
@@ -257,13 +257,13 @@ Login with given credential
 
 Click on submit to update detail
 
-<img src="images/image5.png" alt="third" width="500">
+<img src="images/image28.png" alt="third" width="500">
 
 **Step3:**
 
 Send the /my-account/change-address to repeater.
 
-<img src="images/image5.png" alt="third" width="500">
+<img src="images/image29.png" alt="third" width="500">
 
 Here we can see there are different parameter in response.
 And currentyl I have no idea which vulnerabilty is there
@@ -275,7 +275,7 @@ And currentyl I have no idea which vulnerabilty is there
 **Step3:**
 If I try to change admin function using  prototype pollution. 
 
-<img src="images/image5.png" alt="third" width="500">
+<img src="images/image30.png" alt="third" width="500">
 
 We can see that admin is set to true. But we have no such /admin point to work with
 
@@ -283,19 +283,19 @@ We can see that admin is set to true. But we have no such /admin point to work w
 
 If I make a syntax error we can see in response
 
-<img src="images/image5.png" alt="third" width="500">
+<img src="images/image31.png" alt="third" width="500">
 
 We can see in response we have status code. So we change it using same logic
 
-<img src="images/image5.png" alt="third" width="500">
+<img src="images/image32.png" alt="third" width="500">
 
 To trigger toe status we again make a syntax error this time we can see change status code. But we use status code between 400 and 599
 
-<img src="images/image5.png" alt="third" width="500">
+<img src="images/image33.png" alt="third" width="500">
 
 And the Lab is solved.
 
-<img src="images/image5.png" alt="third" width="500">
+<img src="images/image34.png" alt="third" width="500">
 
 **Step1:**
 
@@ -309,21 +309,21 @@ Login with given credential and click on submit to update address. Secondly go t
 
 Send the POST /my-account/change-address request to repeater 
 
-<img src="images/image5.png" alt="third" width="500">
+<img src="images/image35.png" alt="third" width="500">
 
 Now right click on right click under extension-> server side prototype pollution scanner->server side prototype pollution
 
 Now under extension we can see
 
-<img src="images/image5.png" alt="third" width="500">
+<img src="images/image36.png" alt="third" width="500">
 
 In Burp professional this is also this on DashBoard->issue activity
 
-<img src="images/image5.png" alt="third" width="500">
+<img src="images/image37.png" alt="third" width="500">
 
 As json spacing is mention first we try by adding 10 char space
 
-<img src="images/image5.png" alt="third" width="500">
+<img src="images/image38.png" alt="third" width="500">
 
 **Step4:**
 
@@ -338,17 +338,17 @@ Now we try the payload to execute a command by providing command line argument  
 
 Here a6hwdbmkot68ytdmo4ilpsxe95fw3mrb.oastify.com is my collaborator id to confirm
 
-<img src="images/image5.png" alt="third" width="500">
+<img src="images/image39.png" alt="third" width="500">
 
 Here we can see in responce the value is set 
 
 Now go to POST /admin/jobs  endpoint and send request in reponce we can  se message and confirm it from collaborator
 
-<img src="images/image5.png" alt="third" width="500">
+<img src="images/image40.png" alt="third" width="500">
 
 In collaborator we have
 
-<img src="images/image5.png" alt="third" width="500">
+<img src="images/image41.png" alt="third" width="500">
 
 **Step5:**
 
@@ -363,11 +363,11 @@ Now we have to execute a code on server side. Simply replace curl colaborator id
 }
 ```
 
-<img src="images/image5.png" alt="third" width="500">
+<img src="images/image42.png" alt="third" width="500">
 
 Now we again go to POST /admin/jobs and send request
 
-<img src="images/image5.png" alt="third" width="500">
+<img src="images/image43.png" alt="third" width="500">
 
 And the Lab is solved.
 
