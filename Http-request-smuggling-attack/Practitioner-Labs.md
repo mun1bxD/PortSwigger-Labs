@@ -15,6 +15,7 @@ When using chunked transfer encoding, the body of the HTTP message is broken int
 
 	-Chunk Data: The actual data for that chunk, followed by another newline (CRLF).
 
+```
 <chunk-size-in-hex>\r\n
 <chunk-data>\r\n
 <chunk-size-in-hex>\r\n
@@ -22,14 +23,16 @@ When using chunked transfer encoding, the body of the HTTP message is broken int
 ...
 0\r\n
 \r\n
-
+```
 Example:
+```
 b\r\n
 Hello, Worl\r\n
 2\r\n
 d!\r\n
 0\r\n
 \r\n
+```
 
 • b\r\n: The first chunk is 11 bytes (b in hexadecimal) long.
 • Hello, Worl\r\n: The data for the first chunk.
@@ -309,16 +312,15 @@ Content-Length: 5
 
 Still we have 2 Host header.
 
-Step4:
-Now we send this request
+**Step4:**
 
+Now we send this request
 
 Now when we send simple request we are able to access the admin
 
-
-
 Now the reason is when we send
 
+```
 POST / HTTP/1.1
 Host: 0a5f00c303eeb9ae81d19e8100390025.web-security-academy.net
 Content-Type: application/x-www-form-urlencoded
@@ -333,35 +335,27 @@ Content-Type: application/x-www-form-urlencoded
 Content-Length: 13
 
 appendhost=
-
+```
 
 The content length of second request is set to 13 at minimum it should be body +1 it means the request must be at least 12.
 The idea is to make the next request look like
 appendhost=Host: 0a5f00c303eeb9ae81d19e8100390025.web-security-academy.net so the duplicate header problem is remove
 
 
-Step5:
+**Step5:**
+
 Simply delete user carlos
-
-
 
 When we again send the request the lab will solve
 
+**Step1:**
 
-
-
-
-
-Step1:
 The approach to solve this lab is very similar to the previous lab the only difference is that the front end is YE and backend is CL
 
 First we do some initial Step 
 Send remove unnecessary parameter and change request method to post and Change http protocol t http/1.1
 
-
-
-Step2:
-
+**Step2:**
 
 Now we know that front end is TE so we use correct chunk size and data. The 2a is chunk size of 2 line after that line ie GET and Content.
 
@@ -371,15 +365,12 @@ When we send the normal request we see
 
 
 
-STep2:
+**STep2:**
 Now the other step are same only we set the chunk size 
-
 
 And here we are not authorize
 
-
-
-Step3:
+**Step3:**
 
 Adding a host:localhost
 
@@ -387,177 +378,150 @@ Adding a host:localhost
 And in normal request we can see admin page is accessable
 
 
-Step5:
+**Step5:**
+
 Now we simply delete user carlos
 
 9
-
-From <https://portswigger.net/web-security/hall-of-fame> 
-
 
 Send a normal request to delete user
 
 
 
 
-Step1:
+**Step1:**
+
 In this challnge when se search something in search bar it wil show in response in a tag
 
 
 And second when we access the admin page it show
 
 
-Step2:
+**Step2:**
+
 Send the GET / request to repeater and remove unnecessary header
 
-Step3:
-When we use this payload it take too much time
+**Step3:**
 
+When we use this payload it take too much time
 
 And it is explain earlier that this payload is used for CL.TE vulnerability.
 
-Step3:
-Now when we try to access the admin page it show
+**Step3:**
 
+Now when we try to access the admin page it show
 
 In the next normal request it show unauthorize
 
+**Step4:**
 
-Step4:
 As we know that x-forwareded for heade will not work so we try to extract the header use in the app. Fo this we send the post request to / because search functionality with the parameter search and a  value. But this we set the content length to atleast 163.
 
-
 The reason for setting content length to 163 is that when we send a normal search request with all unnecessary header remove the content length is 163.
-
 
 And we want to extract the header in the next request. If we have not found data in this request we will increase content size.
 
 Now when I send normal search request we have header in response
 
+**Step4:**
 
-Step4:
 Now we access the admin page using this header
 
-
 In normal request we have
 
+**Step6:**
 
-
-Step6:
 Now we simply delete the user carlos
 
-
 In normal request we have
-
 
 And the lab is solved.
 
+**Step1:**
 
-
-
-Step1:
 First we check that user-agent vulnerability. Fist view any post
 
 Here we can see that the value of user agent is store in the input tag
 
+**Step2:**
 
-
-Step2:
 When we cange the value it is show in value attribute
 
+**Step3:**
 
-
-Step3:
 Try can execute an alert to see the cross site vulnerability
-
-
 
 When I refresh the page it show alert
 
-Step4:
+**Step4:**
+
 Final step to solve the lab is to combine the xss with http request smuggling.
 For this we use the payload
-
 
 Now when we refresh the page it will execute the alert.
 
 Here I have skip few step like how I check weather it is CL.TE or TE.CL because it is already explain in other lab. And I think there is no need to explain the payload.
 
+**Step1:**
 
-
-
-Step1:
 End the GET / request to repeater.
 Change request method to POST and uncheck content length update.
 
+**Step2:**
 
-
-Step2:
 To check http request smuggling we have
-
-
 
 Here after the world we not add endline charater because we want next request to append with current.
 
 Now when we send normal request we have
 
-
 This is because the request is interepret by server as
 
 
-Step3:
-Now we send any js file to repeater
+**Step3:**
 
+Now we send any js file to repeater
 
 When we change the header to 
 
-
 We can see a redirection is occuring.
 
-Step4:
-Now when we send POST/ request to this endpoint with a different host
+**Step4:**
 
+Now when we send POST/ request to this endpoint with a different host
 
 We can see in normal get request we have new host
 
+**Step5:**
 
-Step5:
 Now we change the host to exploit server and make the filename to /resources/labheader/js on exploit server and content type to text/javascript
-
 
 In boy we write
 
+**Step7:**
 
-
-
-Step7:
 Send the POST request to exploit server with
 
-
 In response we have
-
-
 
 Note: if now foundthis 302 rediction then again send the previous post request and then this ge and do this until we found redirection. This is because the user access the site after every then second.
 
 We can use intruder as well for this.
 
+**Step1:**
 
-
-
-Step1:
 Send the GET / request to repeater.
 Change request method to post and remove unnecessary header.
 
+**Step2:**
 
-
-Step2:
 Add a new header anyname:anyvalue\r\nTransfer-Encoding: chunked
 
 
 Here after add a newheader but the problem is burp syntax interpretation which is fine.
 
 Before add newheader
+```
 POST / HTTP/2
 Host: 0a5300e8049259638113642900ab006a.web-security-academy.net
 Content-Type: application/x-www-form-urlencoded
@@ -567,47 +531,36 @@ Content-Length: 40
 
 GET /Hello HTTP/1.1
 hello: world
+```
 
-After add newheader ie
-
-
+After add newheader i.e
 
 After send ingt his request when we send normal request we have
 
+**Step3:**
 
-
-Step3:
 Now when we search for any value in search baar it show the previous search
-
 
 Send the request to repeater
 
-
 Remove unnecessary header
-
 
 Now we send the post request with this search paramter and header as show above
 
-
 Here we set the content length to 400 now when we send the normal get request
-
 
 And refresh the page we have
 
+**Step5**
 
-
-Step5
 as we know that user access the ite after 15 second in order to get the user session we send the request with content length to almost 900
-
-
 
 After 15 second when we refresh the home page we have
 
 
-Step6:
+**Step6:**
+
 Copy the session value paste it in inspector application tab->session
 
 
 And click on my account to solve the lab
-
-
