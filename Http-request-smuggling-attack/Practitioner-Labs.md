@@ -53,7 +53,7 @@ Send the GET request to repeater
 
 **Step2:**
 
-Change mathod to post and remove unnecessary content
+Change method to post and remove unnecessary content
 
 <img src="images/image1.png" alt="third" width="500">
 
@@ -127,11 +127,11 @@ change request method to post
 
 **Step2:**
 
-Now we confirm that the client side is uing TE
+Now we confirm that the client side is using TE
 
 <img src="images/image1.png" alt="third" width="500">
 
-Here it is confirm that the client size is uing TE beacue for X chunk size which is invalid secondly there is no corresponding chunk data the  server responnd with invalid request.
+Here it is confirm that the client size is using TE because for X chunk size which is invalid secondly there is no corresponding chunk data the  server respond with invalid request.
 
 **Step3:**
 
@@ -151,7 +151,7 @@ Now we try with the
 
 <img src="images/image1.png" alt="third" width="500">
 
-When we again send the same request  we have
+When we again send the same request we have
 
 <img src="images/image1.png" alt="third" width="500">
 
@@ -174,6 +174,8 @@ The first content length is 18 because
 <img src="images/image1.png" alt="third" width="500">
 
 Now why 56 is set because the hex value till end of line 14 is 56
+
+<img src="images/image1.png" alt="third" width="500">
 
 The next content length is 6 instead of 5 because when we again call the GET/ method it will know first 18 character till line 11 and include G in next request as 0 in step4
 
@@ -212,7 +214,7 @@ Here the backend is also use TE because the last X is ignore. After the byte is 
 
 **Step5:**
 
-We make this lab like TE.CL because we use 2 header one with original vlaue chunked and second with any other. And send request. The front end will execpt transfer encoding and the backend is now shift to content length because of not under standing helloword value as in figure. This may to due to different proxy server or different version of proxy server.
+We make this lab like TE.CL because we use 2 header one with original value chunked and second with any other. And send request. The front end will except transfer encoding and the backend is now shift to content length because of not under standing helloworld value as in figure. This may to due to different proxy server or different version of proxy server.
 
 <img src="images/image1.png" alt="third" width="500">
 
@@ -306,6 +308,7 @@ And the last content length is et to 15 but it must be greater than or equal to 
 **Step1:**
 
 First we do some initial Step 
+
 Send remove unnecessary parameter and change request method to post and Change http protocol t http/1.1
 
 <img src="images/image1.png" alt="third" width="500">
@@ -338,7 +341,7 @@ Here when we send the normal request we see an error
 
 <img src="images/image1.png" alt="third" width="500">
 
-The reason for this error is when we send the request  in the body we have another reques to /admin
+The reason for this error is when we send the request  in the body we have another request to /admin
 Now when we send then normal request the server treat it as 
 
 ```
@@ -353,7 +356,7 @@ Content-Length: 5
 1=2
 ```
 
-As it see 2 host header and 2 request so it print message that duplicate header not alloees in. even if we add a dummy header like
+As it see 2 host header and 2 request so it print message that duplicate header not allows in. even if we add a dummy header like
 
 ```
 GET /Admin HTTP/1.1
@@ -361,7 +364,7 @@ Host: localhost
 Newheader:x
 ```
 
-Still the problem of dublicate header not remove because our request look like
+Still the problem of duplicate header not remove because our request look like
 
 ```
 GET /Admin HTTP/1.1
@@ -469,14 +472,13 @@ Now we simply delete user carlos
 
 Send a normal request to delete user
 
-
 <img src="images/image1.png" alt="third" width="500">
 
 <img src="images/image1.png" alt="third" width="500">
 
 **Step1:**
 
-In this challange when se search something in search bar it wil show in response in a tag
+In this challange when se search something in search bar it will show in response in a tag
 
 <img src="images/image1.png" alt="third" width="500">
 
@@ -508,7 +510,7 @@ In the next normal request it show unauthorize
 
 **Step4:**
 
-As we know that x-forwareded for heade will not work so we try to extract the header use in the app. Fo this we send the post request to / because search functionality with the parameter search and a  value. But this we set the content length to atleast 163.
+As we know that x-forwarded for header will not work so we try to extract the header use in the app. Fo this we send the post request to / because search functionality with the parameter search and a  value. But this we set the content length to at least 163.
 
 <img src="images/image1.png" alt="third" width="500">
 
@@ -632,7 +634,7 @@ Now we change the host to exploit server and make the filename to /resources/lab
 
 <img src="images/image1.png" alt="third" width="500">
 
-In boy we write
+In body we write
 
 <img src="images/image1.png" alt="third" width="500">
 
@@ -663,6 +665,7 @@ Change request method to post and remove unnecessary header.
 
 Add a new header anyname:anyvalue\r\nTransfer-Encoding: chunked
 
+<img src="images/image1.png" alt="third" width="500">
 
 Here after add a newheader but the problem is burp syntax interpretation which is fine.
 
