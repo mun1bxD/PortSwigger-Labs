@@ -1,3 +1,5 @@
+<img src="images/image1.png" alt="third" width="500">
+
 **Step1:**
 
 First we check the end point where we have three headers
@@ -7,12 +9,17 @@ Age: 1
 X-Cache: hit
 ```
 
+<img src="images/image1.png" alt="third" width="500">
 
 **Step 2:**
 
 Now we send the request to root / endpoint with a varaible and a value for cache busting
 
+<img src="images/image1.png" alt="third" width="500">
+
 When I again send the same request we have
+
+<img src="images/image1.png" alt="third" width="500">
 
 **Step 2**
 
@@ -20,21 +27,35 @@ We already know X-forwarded-Host header is supported but we can find it using pa
 
 Right click on get request 
 
+<img src="images/image1.png" alt="third" width="500">
+
 **Step 3:**
 
 When I add any host it will be shown in request
+
+<img src="images/image1.png" alt="third" width="500">
 
 **Step 4:**
 
 Now we add exploit server id instead of host
 
-And set the file endpoint to /resources/js instread of exploit
+<img src="images/image1.png" alt="third" width="500">
+
+<img src="images/image1.png" alt="third" width="500">
+
+And set the file endpoint to /resources/js instead of exploit
 
 In body we add
 
+<img src="images/image1.png" alt="third" width="500">
+
 Now we remove the cache busting variable and store the exploit
 
+<img src="images/image1.png" alt="third" width="500">
+
 Send the request multiple time to solve the lab. If not go to the main page reload the page it will show an alert and lab will solve
+
+<img src="images/image1.png" alt="third" width="500">
 
 **Step1**
 
@@ -45,11 +66,17 @@ Age: 1
 X-Cache: hit
 ```
 
+<img src="images/image1.png" alt="third" width="500">
+
 **Step 2:**
 
 Using a cache busting technique add a variable with a value
 
+<img src="images/image1.png" alt="third" width="500">
+
 When again we send the request we have
+
+<img src="images/image1.png" alt="third" width="500">
 
 So cache busting is working
 
@@ -58,6 +85,8 @@ So cache busting is working
 Here we can see a fehost parameter when I change its value there is no cache hit or miss occur
 
 But when I remove its value in response we have empty string
+
+<img src="images/image1.png" alt="third" width="500">
 
 The json formate is like
 ```
@@ -72,6 +101,8 @@ Our exploit look like
 `{"frontend":""-alert(1)-""}`
 
 Change the value of fhost to **-alert(1)-**
+
+<img src="images/image1.png" alt="third" width="500">
 
 When we reload the page the lab will solve
 
