@@ -1,4 +1,4 @@
-<img src="images/image1.png" alt="third" width="500">
+<img src="images/image1.jpg" alt="third" width="500">
 
 **Step1:**
 
@@ -9,17 +9,17 @@ Age: 1
 X-Cache: hit
 ```
 
-<img src="images/image1.png" alt="third" width="500">
+<img src="images/image1.jpg" alt="third" width="500">
 
 **Step 2:**
 
 Now we send the request to root / endpoint with a varaible and a value for cache busting
 
-<img src="images/image1.png" alt="third" width="500">
+<img src="images/image1.jpg" alt="third" width="500">
 
 When I again send the same request we have
 
-<img src="images/image1.png" alt="third" width="500">
+<img src="images/image1.jpg" alt="third" width="500">
 
 **Step 2**
 
@@ -27,35 +27,35 @@ We already know X-forwarded-Host header is supported but we can find it using pa
 
 Right click on get request 
 
-<img src="images/image1.png" alt="third" width="500">
+<img src="images/image1.jpg" alt="third" width="500">
 
 **Step 3:**
 
 When I add any host it will be shown in request
 
-<img src="images/image1.png" alt="third" width="500">
+<img src="images/image1.jpg" alt="third" width="500">
 
 **Step 4:**
 
 Now we add exploit server id instead of host
 
-<img src="images/image1.png" alt="third" width="500">
+<img src="images/image1.jpg" alt="third" width="500">
 
-<img src="images/image1.png" alt="third" width="500">
+<img src="images/image1.jpg" alt="third" width="500">
 
 And set the file endpoint to /resources/js instead of exploit
 
 In body we add
 
-<img src="images/image1.png" alt="third" width="500">
+<img src="images/image1.jpg" alt="third" width="500">
 
 Now we remove the cache busting variable and store the exploit
 
-<img src="images/image1.png" alt="third" width="500">
+<img src="images/image1.jpg" alt="third" width="500">
 
 Send the request multiple time to solve the lab. If not go to the main page reload the page it will show an alert and lab will solve
 
-<img src="images/image1.png" alt="third" width="500">
+<img src="images/image1.jpg" alt="third" width="500">
 
 **Step1**
 
@@ -66,17 +66,17 @@ Age: 1
 X-Cache: hit
 ```
 
-<img src="images/image1.png" alt="third" width="500">
+<img src="images/image1.jpg" alt="third" width="500">
 
 **Step 2:**
 
 Using a cache busting technique add a variable with a value
 
-<img src="images/image1.png" alt="third" width="500">
+<img src="images/image1.jpg" alt="third" width="500">
 
 When again we send the request we have
 
-<img src="images/image1.png" alt="third" width="500">
+<img src="images/image1.jpg" alt="third" width="500">
 
 So cache busting is working
 
@@ -86,7 +86,7 @@ Here we can see a fehost parameter when I change its value there is no cache hit
 
 But when I remove its value in response we have empty string
 
-<img src="images/image1.png" alt="third" width="500">
+<img src="images/image1.jpg" alt="third" width="500">
 
 The json formate is like
 ```
@@ -102,10 +102,14 @@ Our exploit look like
 
 Change the value of fhost to **-alert(1)-**
 
-<img src="images/image1.png" alt="third" width="500">
+<img src="images/image1.jpg" alt="third" width="500">
 
 When we reload the page the lab will solve
-
+```
+qqqqqqqqqqqqqqqqqqqqqqqqq
+qqqqqqqqqqqqqqqqqqqqqqqqq
+image required
+```
 **Step1:**
 
 Send the GET request to repeater
@@ -114,25 +118,41 @@ Send the GET request to repeater
 
 Add a cache busting variable when we send first time we have
 
+<img src="images/image1.jpg" alt="third" width="500">
+
 When we again we send again we have
+
+<img src="images/image1.jpg" alt="third" width="500">
 
 **Step3:**
 
 Now when we use param miner we can see the X-Forwarded-Scheme header is supported
 
+<img src="images/image1.jpg" alt="third" width="500">
+
 here another header X-forwarded-host is also supported but not trigger here
 
 When we add these two header we can see a redirect
 
+<img src="images/image1.jpg" alt="third" width="500">
+
 Now we redirect to a specific endpoint first check for /resources/js/tracking.js when we add a header we can see a redirect
+
+<img src="images/image1.jpg" alt="third" width="500">
 
 **Step4:**
 
 Now we change host with the url of exploit server
 
+<img src="images/image1.jpg" alt="third" width="500">
+
 And in exploit server we make couple of changes
 
+<img src="images/image1.jpg" alt="third" width="500">
+
 Now store it and when we send the request again couple of time and refresh the page the alert will trigger and the lab will solve.
+
+<img src="images/image1.jpg" alt="third" width="500">
 
 **Step1:**
 
@@ -142,7 +162,11 @@ Send the Root endpoint to repeater
 
 Add a cache busting variable and see the output
 
+<img src="images/image1.jpg" alt="third" width="500">
+
 When we send the request again we have cache hit
+
+<img src="images/image1.jpg" alt="third" width="500">
 
 **Step3:**
 
@@ -150,25 +174,41 @@ Now using param miner I found that the X-Host is allowed
 
 Adding X-Host header with a value
 
+<img src="images/image1.jpg" alt="third" width="500">
+
 **Step4:**
 
 Now we have to get the user-agent because in response we have vary header set to user-agent
 
 For this we add a comment with img tag in body with src is exploit server.
 
+<img src="images/image1.jpg" alt="third" width="500">
+
 When we post command and see the log we have victim user-agent
+
+<img src="images/image1.jpg" alt="third" width="500">
 
 Copy this and add it to user agent instead of our own and change X-Host to  exploit server id
 
-Go to exploit server make make the below changes and store it
+<img src="images/image1.jpg" alt="third" width="500">
+
+Go to exploit server make the below changes and store it
+
+<img src="images/image1.jpg" alt="third" width="500">
 
 Go to repeater and send the request couple of time or multiple time to trigger.
+
+<img src="images/image1.jpg" alt="third" width="500">
 
 **Step1:**
 
 Send the Get / request to repeater and add a cache buster 
 
+<img src="images/image1.jpg" alt="third" width="500">
+
 Here when I change the value there is still cache hit 
+
+<img src="images/image1.jpg" alt="third" width="500">
 
 So we find some other cache busting point.
 
@@ -179,13 +219,19 @@ Why it is important to find cache busting point.
 
 **Step2:**
 
-So we find some other cache buting point like Accept, Accpet-Encoding and Origin header
+So we find some other cache busting point like Accept, Accept-Encoding and Origin header
+
+<img src="images/image1.jpg" alt="third" width="500">
 
 Here we can see no difference
 
 So we try with accept encoding
 
+<img src="images/image1.jpg" alt="third" width="500">
+
 Now we check origin
+
+<img src="images/image1.jpg" alt="third" width="500">
 
 And here its working.
 
@@ -193,86 +239,138 @@ And here its working.
 
 Now I change the value of cb variable we see it will appear in reponce with different cache busting value I mean different origin header value
 
+<img src="images/image1.jpg" alt="third" width="500">
+
 So we try to add an alert here . We also change Origin again to have a cache miss first
+
+<img src="images/image1.jpg" alt="third" width="500">
 
 After checking this it is working.
 
 **Step4:**
 
-Now we have to deliver it to victim for this we remove cache busting header and send the request mutiple time
+Now we have to deliver it to victim for this we remove cache busting header and send the request multiple time
+
+<img src="images/image1.jpg" alt="third" width="500">
 
 And we have lab solve when use access home page.
+
+<img src="images/image1.jpg" alt="third" width="500">
 
 **Step1:**
 
 First we find a cache busting
 
+<img src="images/image1.jpg" alt="third" width="500">
+
 Here when we change the cb value to some thing else it still working . By showing a cache miss
+
+<img src="images/image1.jpg" alt="third" width="500">
 
 And we can in response we have query parameter and a  value
 
-Now when we try an alert at thi point
+<img src="images/image1.jpg" alt="third" width="500">
+
+Now when we try an alert at this point
+
+<img src="images/image1.jpg" alt="third" width="500">
 
 Here the script is added successfully but it will not trigger becacue it is remove due to unuse parameter.
 
 For this we try a name of parameter something that is useful for backend like
 
+<img src="images/image1.jpg" alt="third" width="500">
+
 Send the request multiple time and we have done.
 
-**Step2:**
+<img src="images/image1.jpg" alt="third" width="500">
+
+**Step1:**
 
 Send the /js/geolocate.js?callback=setCountryCookie request to repeater
 
-As we know it suppost cache because of threee header in response i.e
+As we know it support cache because of three header in response 
 
-**Step3:**
+<img src="images/image1.jpg" alt="third" width="500">
+
+**Step2:**
 
 Know we find cache buster
 
-Here we can see the GET request supposrt cache busting by a query parameter
+Here we can see the GET request support cache busting by a query parameter
+
+<img src="images/image1.jpg" alt="third" width="500">
 
 Again same request we have hit this time
+
+<img src="images/image1.jpg" alt="third" width="500">
 
 But we found some other cache busting because we add a parameter cloaking here
 
 So when we try with origin header its working
 
+<img src="images/image1.jpg" alt="third" width="500">
+
 Another same request
 
-**Step4:**
+<img src="images/image1.jpg" alt="third" width="500">
 
-Now when we change value of callback to someother it is reflected in response
+**Step3:**
+
+Now when we change value of callback to some other it is reflected in response
+
+<img src="images/image1.jpg" alt="third" width="500">
 
 But it is of no use we have to find a parameter for cloaking
 
-When I add another paramter with same name but different value the backend prioritize second  value
+When I add another parameter with same name but different value the backend prioritize second  value
+
+<img src="images/image1.jpg" alt="third" width="500">
 
 Now we find a paramter that it support for this we use
 
 `Extension -> paramminer -> guess paramter`
 
-We can see utm_content is supported
+We can see `utm_content` is supported
+
+<img src="images/image1.jpg" alt="third" width="500">
 
 **Step4:**
 
 Adding this parameter with a value
 
+<img src="images/image1.jpg" alt="third" width="500">
+
 Now here is one problem when I change it to
+
+<img src="images/image1.jpg" alt="third" width="500">
 
 Here we can see when I change helll to some thing we have still cache hit
 
+<img src="images/image1.jpg" alt="third" width="500">
+
 But when I change value of variable after & I mean change value of call back variable we have cache miss
 
-It means the backend is treating hell and callback two different buy differentiating using `&`
-So we change & with `;`
+<img src="images/image1.jpg" alt="third" width="500">
 
-Here in response we can see in response front still alert(0) is set buut the backend is treating as single variable
+It means the backend is treating hell and callback two different buy differentiating using `&`
+So we change `&` with `;`
+
+<img src="images/image1.jpg" alt="third" width="500">
+
+Here in response we can see in response front still alert(0) is set but the backend is treating as single variable
 
 Now we remove origin header and send request
+
+<img src="images/image1.jpg" alt="third" width="500">
+
+<img src="images/image1.jpg" alt="third" width="500">
 
 **Step1:**
 
 Send the GET /js/geolocate.js?callback=setCountryCookie requet to repeater.
+
+<img src="images/image1.jpg" alt="third" width="500">
 
 As we can see it support cache.
 
@@ -280,19 +378,31 @@ As we can see it support cache.
 
 Add a cache busting
 
+<img src="images/image1.jpg" alt="third" width="500">
+
 Again send the same request and this time we have hit
+
+<img src="images/image1.jpg" alt="third" width="500">
 
 **Step3:**
 
 As we know in this lab we have to fat get request mean body also contain the same variable as in query parameter with a different value
 
-We can see the new value will apperar in response
+We can see the new value will appear in response
+
+<img src="images/image1.jpg" alt="third" width="500">
 
 Now change value to alert(1)
 
+<img src="images/image1.jpg" alt="third" width="500">
+
 As this is showing in response but to make a difference between header and body we add a non printable character
 
+<img src="images/image1.jpg" alt="third" width="500">
+
 Sending the request couple of time and lab will solve
+
+<img src="images/image1.jpg" alt="third" width="500">
 
 **Step1:**
 
@@ -302,13 +412,21 @@ Send the get request to repeater
 
 Add a cache busting variable
 
+<img src="images/image1.jpg" alt="third" width="500">
+
 Again sending same
 
+<img src="images/image1.jpg" alt="third" width="500">
+	
 **Step3:**
 
 Now when we url encode / of get request we have
 
+<img src="images/image1.jpg" alt="third" width="500">
+
 Now when we add a script with the it will be reflected 
+
+<img src="images/image1.jpg" alt="third" width="500">
 
 Now when we append `/<script>alert(1)</script>` we have alert 
 
