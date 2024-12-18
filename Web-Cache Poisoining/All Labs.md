@@ -105,11 +105,9 @@ Change the value of fhost to **-alert(1)-**
 <img src="images/image16.jpg" alt="third" width="500">
 
 When we reload the page the lab will solve
-```
-qqqqqqqqqqqqqqqqqqqqqqqqq
-qqqqqqqqqqqqqqqqqqqqqqqqq
-image required
-```
+
+<img src="images/image75.png" alt="third" width="500">
+
 **Step1:**
 
 Send the GET request to repeater
