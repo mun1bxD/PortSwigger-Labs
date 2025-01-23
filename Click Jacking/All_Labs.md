@@ -90,7 +90,7 @@ login with given credential
 
 <img src="images/image8.jpg" alt="third" width="500">
 
-In exploit server paste the explit and deliver it to victim. I will url encode the email then it work for me
+In exploit server paste the exploit and deliver it to victim. I will url encode the email then it work for me
 
 ```html
 <style>
