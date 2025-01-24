@@ -50,11 +50,9 @@ We have intercept request  like this:
 
 <img src="images/image3.png" alt="third" width="800">
 
-Forward this request
-
 **Step 3**
 
-forward this request
+Forward this request
 
 <img src="images/image4.png" alt="third" width="800">
 
