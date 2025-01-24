@@ -136,6 +136,8 @@ double encode:`..%25%32%66%25%32%66..%25%32%66%25%32%66..%25%32%66%25%32%66etc%2
 
 **Common obstacles to exploiting path traversal vulnerabilities - Continued**
 
+<img src="images/image_unmap1.png" alt="third" width="800">
+
 An application may require the user-supplied filename to start with the expected base folder, such as /var/www/images. In this case, it might be possible to include the required base folder followed by suitable traversal sequences. For example: filename=`/var/www/images/../../../etc/passwd.
 `
 <img src="images/image15.png" alt="third" width="800">
