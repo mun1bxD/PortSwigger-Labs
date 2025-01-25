@@ -152,14 +152,15 @@ To solve this lab we use payload
 
 </script>"></iframe>
 ```
-
-Decode the result of access log
+Go to exploit server and paste
 
 <img src="images/image12.png" alt="third" width="500">
 
-And submit api key
+Decode the result of access log
 
 <img src="images/image13.png" alt="third" width="500">
+
+And submit api key
 
 Notice the use of an iframe sandbox as this generates a null origin request.
 
