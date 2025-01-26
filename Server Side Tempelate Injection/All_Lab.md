@@ -2,7 +2,7 @@
 
 **Step1:**
 
-first indentify the tempelate injection for ERB template
+first identify the template injection for ERB template
 
 When we click on product1 it prints message in url product is out of stock.
 
@@ -39,7 +39,7 @@ Alternative payload
 
 **Step1:**
 
-First I  review documentation of tornado and we fount to inject tempelate as
+First I  review documentation of tornado and we fount to inject template as
 
 `{{   }}`
 
@@ -159,7 +159,7 @@ Now we go to this link
 
 `https://mahmoudsec.blogspot.com/2019/04/handlebars-template-injection-and-rce.html`
 
-Here I found different tempelate
+Here I found different template
 
 A basic javascript code with corresponding template
 
@@ -289,7 +289,7 @@ conslist.forEach(item => {
 });
 
 
-We url encode this tempelate and inject 
+We url encode this template and inject 
 
 <img src="images/image21.jpg" alt="third" width="500">
 
@@ -315,7 +315,7 @@ Try to replace it with product.self and see result
 
 **Step3:**
 
-Now to extract framework secret key we use node.js tempelate
+Now to extract framework secret key we use node.js template
 
 `{{{ process.env.SECRET_KEY }}} `
 
@@ -351,7 +351,7 @@ Go to product and  then edit template
 
 **Step3:**
 
-Try using simple tempelate:
+Try using simple template:
 
 **Step4:**
 https://book.hacktricks.xyz/pentesting-web/ssti-server-side-template-injection
