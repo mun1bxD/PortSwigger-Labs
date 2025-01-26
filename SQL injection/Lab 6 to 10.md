@@ -1,3 +1,6 @@
+![image](https://github.com/user-attachments/assets/af46095b-1a12-445b-8ed6-aca36d66261c)
+![image](https://github.com/user-attachments/assets/17e1c714-305d-4c5c-ae8c-42d6ca32cc04)
+![image](https://github.com/user-attachments/assets/3f0364df-218d-4faf-ad1e-a5950345937a)
 <img src="images/image24.png" alt="third" width="500">
 
 **Step 1**
@@ -150,7 +153,7 @@ Now login with this credential and lab will be solve.
 
 **Step 1:**
 
-Click on any catrgories
+Click on any categories
 
 <img src="images/image45.png" alt="third" width="500">
 
