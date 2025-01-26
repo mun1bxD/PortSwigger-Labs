@@ -266,7 +266,7 @@ Add an item of less price. In my case I have buy a product for testing that’s 
 
 Now I brough a product like
 
-<img src="images/image38.png" alt="third" width="600">
+<img src="images/image38.png" alt="third" width="350">
 
 **Step3:**
 
@@ -337,35 +337,35 @@ Login with given credential and intercept this request
 
 Login to account we see it is asking for role
 
-<img src="images/image49.png" alt="third" width="600">
+<img src="images/image_unmap1.png" alt="third" width="600">
 
 Logout and then intercept the login request
 
 We have intercepted request
 
-<img src="images/image50.png" alt="third" width="600">
+<img src="images/image49.png" alt="third" width="600">
 
 Forward the request
 
 Now click on drop to drop next request
 
-<img src="images/image51.png" alt="third" width="600">
+<img src="images/image50.png" alt="third" width="600">
 
 When I drop this it show error in browser
 
+<img src="images/image51.png" alt="third" width="600">
+
+Remove the /role-selector from the url and again click on enter
+
 <img src="images/image52.png" alt="third" width="600">
 
-Remove the /role-selector rom the url and again click on enter
+Now forward this request and turn off intercept
 
 <img src="images/image53.png" alt="third" width="600">
 
-Now froward this request and turn off intercept
-
-<img src="images/image54.png" alt="third" width="600">
-
 Now we go to admin panel and delete carlos.
 
-<img src="images/image55.png" alt="third" width="600">
+<img src="images/image54.png" alt="third" width="600">
 
 **Step1:**
 
@@ -375,7 +375,7 @@ Login with given credential
 
 We can see at top
 
-<img src="images/image56.png" alt="third" width="600">
+<img src="images/image55.png" alt="third" width="600">
 
 **Step3:**
 
@@ -384,13 +384,13 @@ Now go to bottom and we have signup
 Enter any email address
 
 
-<img src="images/image57.png" alt="third" width="600">
+<img src="images/image56.png" alt="third" width="600">
 
 Click on signup
 
-<img src="images/image58.png" alt="third" width="600"> 
+<img src="images/image57.png" alt="third" width="600"> 
 
-Now we have mutiple coupen NEWCUST5 and SIGNUP 30
+Now we have multiple coupen NEWCUST5 and SIGNUP 30
   
 **Step4:**
 
@@ -402,4 +402,4 @@ Here we can clearly see that when we enter first coupon and then enter the secon
 
 Now when I use both the coupon alternatively it will not show an error and the price decrease on the basis of coupon
 
-<img src="images/image7.png" alt="third" width="600">
+<img src="images/image58.png" alt="third" width="600">
