@@ -35,7 +35,7 @@ We modify request
 
 <img src="images/image105.png" alt="third" width="800">
 
-The responce is shown after time
+The response is shown after time
 
 <img src="images/image106.png" alt="third" width="800">
 
