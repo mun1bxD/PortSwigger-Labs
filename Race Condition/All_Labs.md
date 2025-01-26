@@ -270,3 +270,77 @@ No we go to email server and verify hello1
 Refresh main page and we are login as admin
 
 <img src="images/image21.png" alt="third" width="600">
+
+<img src="images/image_unmap1.png" alt="third" width="600">
+
+**Step1:**
+
+Login with given credential
+
+We have an email address and update email option
+
+**Step2:**
+
+Logout from account and click on forget password and enter email address
+
+<img src="images/image_unmap2.png" alt="third" width="600">
+
+<img src="images/image_unmap3.png" alt="third" width="600">
+
+**Step3:**
+
+Send the POST /forgot-password to repeater
+
+<img src="images/image_unmap4.png" alt="third" width="600">
+
+Remove last line csrf token and username
+
+Remove cookies line 
+
+Right click and change request method to get
+
+
+<img src="images/image_unmap5.png" alt="third" width="600">
+
+
+When we send the above request first time it have unique phpsessioNid and  crsf token for every request it is unique
+
+**Step4:**
+
+Send the Post /Forget-password requesT to repeater multIple time
+And in first request set the phpsessionid and crsf come from above request ie Get request
+
+Now send the above get request again and this time we have different  phpsessionid and crsf.
+In second request set the value
+
+But in second request set username to carlos
+
+Create group of two request
+
+<img src="images/image_unmap6.png" alt="third" width="600">
+
+<img src="images/image_unmap7.png" alt="third" width="600">
+
+Send the  reqUest in parallel
+
+**Step5:**
+
+Go to email server and open link
+
+<img src="images/image_unmap8.png" alt="third" width="600">
+
+When we change username to carlos  in url we have
+
+<img src="images/image_unmap9.png" alt="third" width="600">
+
+We change password for carlos user
+
+<img src="images/image_unmap10.png" alt="third" width="600">
+
+Login with the credential carlos and password
+
+<img src="images/image_unmap11.png" alt="third" width="600">
+
+Go to admin panel and delete user carlos
+
+And lab is solve
