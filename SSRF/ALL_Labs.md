@@ -148,11 +148,9 @@ Now add the lab to scope of extension
 
 Right click on add to scope
 
-<img src="images/image30.png" alt="third" width="500">
-
 Go to lab and refresh page we can see response
 
-<img src="images/image31.png" alt="third" width="500">
+<img src="images/image30.png" alt="third" width="500">
 
 **Step4 :**
 
@@ -160,7 +158,7 @@ Here one thing is clear that there is a blind SSRF because collaborator show int
 
 Send the below request to intruder
 
-<img src="images/image32.png" alt="third" width="500">
+<img src="images/image31.png" alt="third" width="500">
 
 **Step5 :**
 
@@ -184,17 +182,17 @@ And add a number payload to 1
 
 Payload setting
 
-<img src="images/image33.png" alt="third" width="500">
+<img src="images/image32.png" alt="third" width="500">
 
 We can see interaction with a specific IP with in range in collaborator
 
-<img src="images/image34.png" alt="third" width="500">
+<img src="images/image33.png" alt="third" width="500">
 
 **Step6 :**
 
 Submit the answer peter-ROBIX
 
-<img src="images/image35.png" alt="third" width="500">
+<img src="images/image34.png" alt="third" width="500">
 
 **Step1 :**
 
@@ -204,7 +202,7 @@ Click on view product id -> check stock
 
 Send the POST request method to repeater
 
-<img src="images/image36.png" alt="third" width="500">
+<img src="images/image35.png" alt="third" width="500">
 
 Decode the stockApi by ctrl+shift+u
 
@@ -214,11 +212,11 @@ Now we replace this with
 
 `https://localhost:80/`
 
-<img src="images/image37.png" alt="third" width="500">
+<img src="images/image36.png" alt="third" width="500">
 
 Now we append   stock.weliketoshop.net
 
-<img src="images/image38.png" alt="third" width="500">
+<img src="images/image37.png" alt="third" width="500">
 
 So it show an internal server error
 
@@ -226,13 +224,13 @@ Remove @stock.weliketoshop.net from request using #
 
 `stockApi=http://localhost:80#@stock.weliketoshop.net/`
 
-<img src="images/image39.png" alt="third" width="500">
+<img src="images/image38.png" alt="third" width="500">
 
 So we double encode #
 
 `stockApi=http://localhost:80%2523@stock.weliketoshop.net/`
 
-<img src="images/image40.png" alt="third" width="500">
+<img src="images/image39.png" alt="third" width="500">
 
 And we have 200 ok result
 
@@ -240,4 +238,4 @@ Now we simple access admin and delete user carlos
 ```
 stockApi=http://localhost:80%2523@stock.weliketoshop.net/admin/delete?username=carlos
 ```
-<img src="images/image41.png" alt="third" width="500">
+<img src="images/image40.png" alt="third" width="500">
