@@ -28,7 +28,7 @@ So we try with
 
 <img src="images/image73.png" alt="third" width="700">
 
-By using `'||(SELECT '' FROM DUAL)||'`  this statement it contain DUAL keyword it is clear that the user use oracle database.
+By using `'||(SELECT '' FROM DUAL)||'`  this statement it contain DUAL keyword it is clear that the Website use oracle database.
 
 Because by replacing Dual with table name it gives error.
 
