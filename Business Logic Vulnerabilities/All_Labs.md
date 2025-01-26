@@ -337,7 +337,7 @@ Login with given credential and intercept this request
 
 Login to account we see it is asking for role
 
-<img src="images/image_unmap1.png" alt="third" width="600">
+<img src="images/image_unmap0.png" alt="third" width="600">
 
 Logout and then intercept the login request
 
@@ -403,3 +403,264 @@ Here we can clearly see that when we enter first coupon and then enter the secon
 Now when I use both the coupon alternatively it will not show an error and the price decrease on the basis of coupon
 
 <img src="images/image58.png" alt="third" width="600">
+
+<img src="images/image_unmap1.png" alt="third" width="600">
+
+**Step1**
+
+Login with given credential
+
+<img src="images/image_unmap2.png" alt="third" width="600">
+
+Now we paste the email in home -> input box at bottom
+
+`wiener@exploit-0a6e0006034e355d8157ba0c01b70082.exploit-server.net`
+
+<img src="images/image_unmap3.png" alt="third" width="600">
+
+Click on signup we have
+
+<img src="images/image_unmap4.png" alt="third" width="600">
+
+Now add a card to cart and apply coupon we have
+
+<img src="images/image_unmap5.png" alt="third" width="600">
+
+Click on place order 
+
+<img src="images/image_unmap6.png" alt="third" width="600">
+
+**Step2:**
+
+Now go to my-account page and paste the code for redeem and we have 
+
+<img src="images/image_unmap7.png" alt="third" width="600">
+
+It means that it is not redeem the discount it is redeem original price of product
+
+**Step3:**
+
+Now we do this step continously to make the 1000 dollar to buy jacket for this we create a macro base on the request chaining
+
+<img src="images/image_unmap8.png" alt="third" width="600">
+
+Now the highlight are the request flow
+
+```
+POST /cart
+POST /cart/coupon
+POST /cart/checkout
+GET /cart/order-confirmation?order-confirmed=true
+POST /gift-card
+```
+
+
+**Step4:**
+
+Under `Proxy->proxy Setting->sessions`
+
+<img src="images/image_unmap9.png" alt="third" width="600">
+
+Now add a macro with the above sequence
+
+<img src="images/image_unmap10.png" alt="third" width="600">
+
+**Step5:**
+
+Now we make couple of changes
+
+First we have code in 
+
+`GET /cart/order-confirmation?order-confirmed=true` which is used for redeem 
+
+Click Configure item. In the dialog that opens, click Add to create a custom parameter. Name the parameter gift-card and highlight the gift card code at the bottom of the response. 
+
+
+<img src="images/image_unmap11.png" alt="third" width="600">
+
+
+Click ok and then ok
+
+
+1. Select the POST /gift-card request and click Configure item again. In the Parameter handling section, use the drop-down menus to specify that the gift-card parameter should be derived from the prior response (response 4). Click OK.
+
+<img src="images/image_unmap12.png" alt="third" width="600">
+
+Set gift card from previous response
+
+
+Now click on test macro to test
+
+<img src="images/image_unmap13.png" alt="third" width="600">
+
+Now when we refresh page the macro is working correctly
+
+**Step6:**
+
+Now make few change
+
+Again click on session
+    
+<img src="images/image_unmap14.png" alt="third" width="600">
+
+Go to session handling rule
+
+Add a rule 
+
+<img src="images/image_unmap15.png" alt="third" width="600">
+
+Under scope add all url
+
+<img src="images/image_unmap16.png" alt="third" width="600">
+
+Under detail add a rule action name "run a macro" and select a macro
+
+<img src="images/image_unmap17.png" alt="third" width="600">
+
+Click on ok
+
+
+**Step7**
+
+Now we have to continuously execute macro to increase price
+
+Send a request to intruder let my-account and attack to snipper and payload to null
+
+<img src="images/image_unmap18.png" alt="third" width="600">
+
+Payload setting
+
+<img src="images/image_unmap19.png" alt="third" width="600">
+
+In resource pool we create new resource pool with max concurrent request 1
+
+<img src="images/image_unmap20.png" alt="third" width="600">
+
+Under logger tab we can see macro is working correctly
+
+<img src="images/image_unmap21.png" alt="third" width="600">
+
+It may take time because in one request we are sending 5 request
+
+<img src="images/image_unmap22.png" alt="third" width="600">
+
+
+Finally when we refresh page we have enough money to buy a jacket
+
+<img src="images/image_unmap23.png" alt="third" width="600">
+
+**Step1:**
+
+Login with given credential and check the stay log in box
+
+<img src="images/image_unmap24.png" alt="third" width="600">
+
+
+**Step2:**
+
+Go to any post and post with incorrect email
+
+<img src="images/image_unmap25.png" alt="third" width="600">
+
+We have an invalid email address
+
+<img src="images/image_unmap26.png" alt="third" width="600">
+
+**Step3:**
+
+Send the POST /post/comment and GET /post?postId=4 repeater
+
+<img src="images/image_unmap27.png" alt="third" width="600">
+
+The get request
+
+<img src="images/image_unmap28.png" alt="third" width="600">
+
+Here we can see that the response notification of POST request is set as notification cookie in GET request.
+
+Here in GET  response we have
+
+<img src="images/image_unmap29.png" alt="third" width="600">
+
+**Step4:**
+
+Now when we change the email in post request 
+
+<img src="images/image_unmap30.png" alt="third" width="600">
+
+Now when we paste the notification in get  request notification we have
+
+<img src="images/image_unmap31.png" alt="third" width="600">
+
+**Step5:**
+
+When we paste the value of stay logged in in notification we have
+
+<img src="images/image_unmap32.png" alt="third" width="600">
+
+Now in POST /post/comment change email with administrator:time-stamp in my case administrator:1737514757171
+
+And send request
+
+<img src="images/image_unmap33.png" alt="third" width="600">
+
+Copy the notification and paste it in GET request we have
+
+<img src="images/image_unmap34.png" alt="third" width="600">
+
+Now here the length of Invalid email address: is 23 character we have to remove it 
+
+Now we send the notification to burp decoder and decode it url follow by decode base 64
+
+<img src="images/image_unmap35.png" alt="third" width="600">
+
+Select 23 byte from decoded notification right click and remove
+
+Again base encode and then url encode
+
+<img src="images/image_unmap36.png" alt="third" width="600">
+
+Paste it in GET request notification
+
+<img src="images/image_unmap37.png" alt="third" width="600">
+
+**Step6:**
+
+Now here the length should be multiple of 16
+
+For this we send a post request with email value
+
+<img src="images/image_unmap38.png" alt="third" width="600">
+
+Again copy paste the notification value from response in get request
+
+<img src="images/image_unmap39.png" alt="third" width="600">
+
+Now here invalid email till 'a' is multiple of 16 ie.32 character
+
+Invalid email address: qqqqqqqqq
+
+
+Now again send the notification value to decoder and remove first 32 character
+
+<img src="images/image_unmap40.png" alt="third" width="600">
+
+
+Again encode and base 64 follow by url encode
+
+<img src="images/image_unmap41.png" alt="third" width="600">
+
+
+Here we can see we the notification cookies is ok for admin
+
+Send the GET request to repeater and change endpoint to /admin
+
+Delete the session cookie entirely, and replace the stay-logged-in cookie with the ciphertext of your self-made cookie. Send the request. Observe that you are now logged in as the administrator and have access to the admin panel.
+
+<img src="images/image_unmap42.png" alt="third" width="600">
+
+Send a get request to 
+
+<img src="images/image_unmap43.png" alt="third" width="600">
+
+And lab is solved
