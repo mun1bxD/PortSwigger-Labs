@@ -274,7 +274,7 @@ And currentyl I have no idea which vulnerabilty is there
 • Charset override
 
 
-**Step3:**
+**Step4:**
 If I try to change admin function using  prototype pollution. 
 
 <img src="images/image30.png" alt="third" width="500">
