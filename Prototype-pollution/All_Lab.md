@@ -373,3 +373,39 @@ Now we again go to POST /admin/jobs and send request
 
 And the Lab is solved.
 
+<img src="images/image_unmap1.png" alt="third" width="600">
+
+
+1. Load the lab in Burp's built-in browser.
+2. Enable DOM Invader and enable the prototype pollution option.
+3. Open the browser DevTools panel, go to the DOM Invader tab, then reload the page.
+
+<img src="images/image_unmap2.png" alt="third" width="600">
+
+
+Click on first scan gadget
+
+<img src="images/image_unmap3.png" alt="third" width="600">
+
+Now in inspect-> dom invader we have
+
+<img src="images/image_unmap4.png" alt="third" width="600">
+
+Now when we click on exploit we have an alert in browser
+
+<img src="images/image_unmap5.png" alt="third" width="600">
+
+Now copy the url and in exploit server paste it in a script tag  and a variable
+
+`https://0a87006c0425453384b9b33b006f0040.web-security-academy.net/#__proto__[hitCallback]=alert%281%29`
+
+<img src="images/image_unmap6.png" alt="third" width="600">
+
+
+Now deliver exploit to victim to solve the lab.
+
+```
+<script>
+    location="https://0a4a00d4030762b18e9f654e002a000c.web-security-academy.net/#__proto__[hitCallback]=alert%28document.cookie%29"
+</script>
+```
