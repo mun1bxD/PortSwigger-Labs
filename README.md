@@ -14,3 +14,5 @@ Burp Suite is utilized extensively throughout the labs for web application testi
 **Prerequisites:**
 Ensure you have Burp Suite installed on your system. If not, you can download it from here.
 Familiarize yourself with web exploitation concepts and techniques. PortSwigger's web security academy is an excellent resource for this purpose.
+
+**Platform:** [Portswigger](https://www.portswigger.net)
