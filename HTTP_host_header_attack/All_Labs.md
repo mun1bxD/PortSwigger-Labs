@@ -247,4 +247,45 @@ At /admin we can see the csrf token. Now we copy it and send a get delete endpoi
  
 And the lab is solved.
 
+<img src="images/image38.png" alt="third" width="500">
 
+**Step1:**
+
+Send the GET / Request to repeater
+
+
+<img src="images/image39.png" alt="third" width="500">
+
+**Step2:**
+
+When we change host to 192.168.0.1 and when we send the request to /admin  endpoint we have
+
+<img src="images/image40.png" alt="third" width="500">
+
+When we follow redirection we reach to Root endpoint
+
+<img src="images/image41.png" alt="third" width="500">
+
+**Step3:**
+
+Now we make group of two request one is normal root request secondwith host  is given ip address and endpoint to /admin 
+
+When we send in sequence in single connection
+Remember to send the connection keep-alive
+
+
+Request 1
+
+<img src="images/image42.png" alt="third" width="500">
+
+Request 2
+
+<img src="images/image43.png" alt="third" width="500">
+
+We can see we have access to admin endpoint
+
+Now to delete carlos make endpoint to /admin/delete and method is set to post and in body set the csrf and username which is show in response
+
+<img src="images/image44.png" alt="third" width="500">
+
+And the lab is solved
