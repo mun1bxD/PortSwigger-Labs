@@ -78,15 +78,15 @@ First send the request to intruder
 
 Add a position for payload and in payload setting paste the copy payload list
 
-<img src="images/image12.jpg" alt="third" width="500">
+<img src="images/unmap_image1.png" alt="third" width="500">
 
 At the bottom of page we have
 
-<img src="images/image13.jpg" alt="third" width="500">
+<img src="images/unmap_image2.png" alt="third" width="500">
 
 Turn of this
 
-<img src="images/image14.jpg" alt="third" width="500">
+<img src="images/unmap_image3.png" alt="third" width="500">
 
 Start attack… we see only 2 delimiter is supported
 
@@ -143,17 +143,17 @@ Send the request to repeater
 
 In payload setting we have
 
-Add a position for payload and in payload setting paste the copy payload list
+Add a position for payload and in payload setting paste the copy payload list.
 
-<img src="images/image24.jpg" alt="third" width="500">
+<img src="images/unmap_image1.png" alt="third" width="500">
 
 At the bottom of page we have
 
-<img src="images/image25.jpg" alt="third" width="500">
+<img src="images/unmap_image2.png" alt="third" width="500">
 
 Turn of this
 
-<img src="images/image26.jpg" alt="third" width="500">
+<img src="images/unmap_image3.png" alt="third" width="500">
 
 Start attack… we see only 1 delimiter is supported
 
@@ -248,19 +248,19 @@ In payload setting we have
 
 Add a position for payload and in payload setting paste the copy payload list
 
-<img src="images/image42.jpg" alt="third" width="500">
+<img src="images/unmap_image1.png" alt="third" width="500">
 
 At the bottom of page we have
 
-<img src="images/image43.jpg" alt="third" width="500">
+<img src="images/unmap_image2.png" alt="third" width="500">
 
 Turn of this
 
-<img src="images/image44.jpg" alt="third" width="500">
+<img src="images/unmap_image3.png" alt="third" width="500">
 
 Start attack… we see 4 delimiter is supported
 
-<img src="images/image45.jpg" alt="third" width="500">
+<img src="images/unmap_image4.png" alt="third" width="500">
 
 Check the delimiter ? And it is working as seen earlier
 
@@ -368,15 +368,15 @@ Payload setting
 
 Add a position for payload and in payload setting paste the copy payload list
 
-<img src="images/image65.jpg" alt="third" width="500">
+<img src="images/unmap_image1.png" alt="third" width="500">
 
 At the bottom of page we have
 
-<img src="images/image66.jpg" alt="third" width="500">
+<img src="images/unmap_image2.png" alt="third" width="500">
 
 Turn of this
 
-<img src="images/image67.jpg" alt="third" width="500">
+<img src="images/unmap_image3.png" alt="third" width="500">
 
 In response we can see only 2 delimiter are supported.
 
@@ -419,7 +419,7 @@ Select the my-account and try the list of common file
 
 Payload setting
 
-<img src="images/image75.jpg" alt="third" width="500">
+<img src="images/unmap_image5.png" alt="third" width="500">
 
 We can see in response when we sort length we have two file is support cache  i.e robots.txt and favicon.ico
 
