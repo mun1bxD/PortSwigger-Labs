@@ -267,6 +267,7 @@ Generate a symmetric key from JWT editor extension and add an empty byte in k pa
 
 Click on sign to sign
 
+<img src="images/image41.png" alt="third" width="500">
 
 Here I use the below python script for generating JWT token 
 
@@ -295,11 +296,11 @@ print("Generated JWT:", token)
 
 When I send the request we have admin access
 
-<img src="images/image41.png" alt="third" width="500">
+<img src="images/image42.png" alt="third" width="500">
 
 Now we send the Get request to /admin/delete?username=carlos to solve lab
 
-<img src="images/image42.png" alt="third" width="500">
+<img src="images/image43.png" alt="third" width="500">
 
 ## Vulnerability
 
